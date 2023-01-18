@@ -2,7 +2,7 @@ package churrasco;
 
 import java.util.Scanner;
 
-public class menuopcao {
+public class MenuOpcao {
 
 	Scanner sc = new Scanner(System.in);
 
