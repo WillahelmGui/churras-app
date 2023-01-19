@@ -2,10 +2,10 @@ package churrasco;
 
 import java.util.Scanner;
 
-class calculo {
+class Calculo {
 
 	public static void calcular() {
-
+		
 		double valor1, valor2, valor3, valor4, valor5,total;
 
 		Scanner sc = new Scanner(System.in);
@@ -44,7 +44,7 @@ class calculo {
 		valor5 = F * qtKg5;
 
 		total = ( + valor1 + valor2 + valor3 + valor4 + valor5);
-         
+		Math. round(total);
 		System.out.println("o  valor total é " + total);
 		sc.close();
 	}
