@@ -88,8 +88,8 @@ public class SelecaoDeCarnes {
 			System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você selecionou Picanha");
 		} else
-			System.out.println("\n/-------------------------------------\\");
-		System.out.println("Você não selecionou  Picanha");
+			System.out.println("\n/-------------------------------------\\\n" + "Você não selecionou  Picanha");
+			
 		if (B2 == true) {
 			System.out.println("Você selecionou Costela");
 		} else
@@ -103,13 +103,10 @@ public class SelecaoDeCarnes {
 		} else
 			System.out.println("Você não selecionou Linguiça");
 		if (B5 == true) {
-			System.out.println("Você selecionou Fraldinha" + 
-		"\n\\\\-------------------------------------/");
+			System.out.println("Você selecionou Fraldinha" + "\n\\\\-------------------------------------/");
 
 		} else
-			System.out.println("Você não selecionou Faraldinha" + 
-		"\n\\\\-------------------------------------/");
-		
-	}
+			System.out.println("Você não selecionou Faraldinha" + "\n\\\\-------------------------------------/");
 
+	}
 }
