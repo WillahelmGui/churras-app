@@ -30,7 +30,7 @@ public class MenuOpcao {
 			case 1:
 				calculo.calcular();
 				break;
-			case 2:
+			case 2:Calculokg.kgGrama();
 
 				break;
 			case 3:
@@ -44,7 +44,7 @@ public class MenuOpcao {
 				System.out.println("digite um numero valido" + opcaoEscolhida);
 				break;
 			}
-			sc.close();
+		
 		}
 
 	}
