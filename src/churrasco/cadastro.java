@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class churrasAppMenu {
+public class menuOpcao {
 	static Scanner scan;
 
 
