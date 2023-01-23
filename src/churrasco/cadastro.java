@@ -1,11 +1,11 @@
-package Churrasco;
+package churrasco;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class churrasAppMenu {
+public class menuOpcao {
 	static Scanner scan;
 
 
@@ -32,4 +32,5 @@ public class churrasAppMenu {
 		
 		
 		
-	;
+	}
+}
