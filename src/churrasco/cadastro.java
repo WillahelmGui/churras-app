@@ -12,7 +12,7 @@ public class churrasAppMenu {
 	public void CadastroClass() {
 		scan = new Scanner(System.in);
 		int quantosNomes;
-		String nomes;
+
 		
 		ArrayList<String> nome = new ArrayList<>();
 		System.out.println("quantos participantes comparecerão? ");
