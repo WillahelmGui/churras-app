@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class selecaoDeCarnes {
+public class SelecaoDeCarnes {
 	int C1;
 	int C2;
 	int C3;
