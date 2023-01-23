@@ -4,7 +4,6 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Cadastro {
 	static Scanner scan;
 
@@ -27,19 +26,15 @@ public class Cadastro {
 		System.out.println("digite o nome do participante: ");
 		
 		nome.add(scan.next());
-			
+	
 		}
 		System.out.println("os paritipantes: "+ nome + " \nconfirmaram a presença");
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println(" ");
 
-
-		
+	
 		
 	}
-
-
-		
 	
 }
