@@ -31,8 +31,7 @@ public class MenuOpcao {
 
 			switch (opcaoEscolhida) {
 			case 1:
-			cadastro = new  churrasAppCadastro();
-			cadastro.CadastroClass();
+				cadastro.CadastroClass();
 				break;
 			case 2:
 				SelecaoDeCarnes.selecao();
