@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class menuOpcao {
+public class cadastro {
 	static Scanner scan;
 
 
-	public void CadastroClass() {
+	public static void CadastroClass() {
+		
+		System.out.println("      CADASTRO SELECIONADO");
+		System.out.println(" ");
+
 		scan = new Scanner(System.in);
 		int quantosNomes;
 
@@ -26,11 +30,16 @@ public class menuOpcao {
 			
 		}
 		System.out.println("os paritipantes: "+ nome + " \nconfirmaram a presença");
-		
-		
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println(" ");
+
 
 		
 		
-		
 	}
+
+
+		
+	
 }
