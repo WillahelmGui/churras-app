@@ -19,13 +19,13 @@ public class churrasAppMenu {
 		quantosNomes = scan.nextInt();
 		
 		
-		for(int i = 0; i<=quantosNomes; i++) {
+		for(int i = 1; i<=quantosNomes; i++) {
 		System.out.println("digite o nome do participante: ");
 		
-		nome.add(scan.nextLine());
+		nome.add(scan.next());
 			
 		}
-		System.out.println(nome);
+		System.out.println("os paritipantes: "+ nome + " \nconfirmaram a presença");
 		
 		
 
