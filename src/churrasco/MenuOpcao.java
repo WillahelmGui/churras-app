@@ -9,7 +9,7 @@ public class MenuOpcao {
 	public static void menuopcao() {
 		System.out.println("\n--------------------------");
 		System.out.println("Escolha uma das opções");
-		System.out.println("1. Registro");
+		System.out.println("1. Cadastro");
 		System.out.println("2. Seleção de Carnes");
 		System.out.println("3. Cálculo");
 		System.out.println("4. Sair");
