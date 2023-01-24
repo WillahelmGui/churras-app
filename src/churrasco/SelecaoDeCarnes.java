@@ -117,6 +117,6 @@ public class SelecaoDeCarnes {
 		} else
 			System.out.println("Você não selecionou Faraldinha" + "\n\\\\-------------------------------------/");
 
-		
+		Bebidas.selecao();
 	}
 }

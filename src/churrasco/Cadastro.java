@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class Cadastro {
 
-	static int quantosNomes;
+	static ArrayList<String> nome;
 
 	public static void CadastroClass() {
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println(" 		CADASTRO SELECIONADO");
 		System.out.println("\\--------------------------------------------------/");
 
-		ArrayList<String> nome = new ArrayList<>();
+		
 
 		System.out.println("quantas pessoas comparecerão? ");
-		quantosNomes = MenuOpcao.sc.nextInt();
-
+		int quantosNomes = MenuOpcao.sc.nextInt();
+		nome = new ArrayList<>();
 		for (int i = 1; i <= quantosNomes; i++) {
 			System.out.println("digite o nome dos participantes: ");
 			nome.add(MenuOpcao.sc.next() + MenuOpcao.sc.nextLine());

@@ -16,7 +16,7 @@ public class Calculokg {
 
 		System.out.println(
 				"Considerando que cada pessoa bebe 1,4L e come aprox 550G no churrasco, \n" + "Você deve comprar:");
-		CarnePesoTotal = Cadastro.quantosNomes * CarnePessoa;
+		CarnePesoTotal = Cadastro.nome.size() * CarnePessoa;
 		if (CarnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
