@@ -37,7 +37,7 @@ public class MenuOpcao {
 				SelecaoDeCarnes.selecao();
 				break;
 			case 3:
-				Calculo.calcular();
+				Calculokg.kgGrama();
 				break;
 			case 4:
 				break;

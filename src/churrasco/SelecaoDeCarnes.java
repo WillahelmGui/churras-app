@@ -1,15 +1,15 @@
 package churrasco;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+
+
 
 public class SelecaoDeCarnes {
-	int C1;
-	int C2;
-	int C3;
-	int C4;
-	int C5;
+	static int C1;
+	static int C2;
+	static int C3;
+	static int C4;
+	static int C5;
 
 	static boolean B1;
 	static boolean B2;
@@ -18,6 +18,11 @@ public class SelecaoDeCarnes {
 	static boolean B5;
 
 	public static void selecao() {
+		System.out.println("\n/--------------------------------------------------\\");
+		System.out.println(" 		  SELEÇÃO DE CARNES");
+		System.out.println("\\--------------------------------------------------/");
+
+		System.out.println("As carnes disponíveis são: ");
 
 		ArrayList<String> productList = new ArrayList<String>();
 		productList.add("Picanha");
@@ -25,7 +30,11 @@ public class SelecaoDeCarnes {
 		productList.add("Asinha de Frango");
 		productList.add("Linguiça");
 		productList.add("Fraldinha");
-		System.out.print(productList);
+
+		for (int j = 0; j < productList.size(); j++) {
+
+			System.out.println(j + 1 + ". " + productList.get(j));
+		}
 
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println("Escolha as carnes desejadas");
@@ -35,7 +44,7 @@ public class SelecaoDeCarnes {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println("\n/-------------------------------------\\");
-		System.out.println("VocÊ gostaria de comprar Picanha?");
+		System.out.println("Você gostaria de comprar Picanha?");
 		System.out.println("\\-------------------------------------/");
 		int C1 = MenuOpcao.sc.nextInt();
 		if (C1 == 1) {
@@ -44,7 +53,7 @@ public class SelecaoDeCarnes {
 			B1 = false;
 
 		System.out.println("\n/-------------------------------------\\");
-		System.out.println("VocÊ gostaria de comprar Costela?");
+		System.out.println("Você gostaria de comprar Costela?");
 		System.out.println("\\-------------------------------------/");
 
 		int C2 = MenuOpcao.sc.nextInt();
@@ -55,7 +64,7 @@ public class SelecaoDeCarnes {
 			B2 = false;
 
 		System.out.println("\n/-------------------------------------\\");
-		System.out.println("VocÊ gostaria de comprar Asinha de Frango?");
+		System.out.println("Você gostaria de comprar Asinha de Frango?");
 		System.out.println("\\-------------------------------------/");
 
 		int C3 = MenuOpcao.sc.nextInt();
@@ -65,7 +74,7 @@ public class SelecaoDeCarnes {
 			B3 = false;
 
 		System.out.println("\n/-------------------------------------\\");
-		System.out.println("VocÊ gostaria de comprar Linguiça");
+		System.out.println("Você gostaria de comprar Linguiça");
 		System.out.println("\\-------------------------------------/");
 
 		int C4 = MenuOpcao.sc.nextInt();
@@ -75,7 +84,7 @@ public class SelecaoDeCarnes {
 			B4 = false;
 
 		System.out.println("\n/-------------------------------------\\");
-		System.out.println("VocÊ gostaria de comprar Fraldinha?");
+		System.out.println("Você gostaria de comprar Fraldinha?");
 		System.out.println("\\-------------------------------------/");
 
 		int C5 = MenuOpcao.sc.nextInt();
@@ -89,7 +98,7 @@ public class SelecaoDeCarnes {
 			System.out.println("Você selecionou Picanha");
 		} else
 			System.out.println("\n/-------------------------------------\\\n" + "Você não selecionou  Picanha");
-			
+
 		if (B2 == true) {
 			System.out.println("Você selecionou Costela");
 		} else
@@ -108,5 +117,6 @@ public class SelecaoDeCarnes {
 		} else
 			System.out.println("Você não selecionou Faraldinha" + "\n\\\\-------------------------------------/");
 
+		
 	}
 }
