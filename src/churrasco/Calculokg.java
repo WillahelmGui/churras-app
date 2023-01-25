@@ -28,7 +28,7 @@ public class Calculokg {
 			for (int j = 0; j < SelecaoDeCarnes.produtosSelecionados.size(); j++) {
 
 				System.out.println(
-						j + 1 + ". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarnes.produtosSelecionados.size())
+						". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarnes.produtosSelecionados.size())
 								+ "Kg de " + SelecaoDeCarnes.produtosSelecionados.get(j));
 
 			}
@@ -46,7 +46,7 @@ public class Calculokg {
 
 			for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
 				System.out.println(
-						k + 1 + ". " + df.format((Bebidas.BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size())
+						". " + df.format((Bebidas.BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size())
 								+ "L de " + Bebidas.BebidasSelecionadas.get(k));
 			}
 			System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
