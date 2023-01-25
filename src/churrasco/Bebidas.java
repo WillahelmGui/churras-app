@@ -55,9 +55,9 @@ public class Bebidas {
 		BebidasSelecionadas = new ArrayList<String>();
 		
 		do {
-			System.out.println("\n/-------------------------------------\\");
+		//	System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar Cerveja?");
-			System.out.println("\\-------------------------------------/");
+		//	System.out.println("\\-------------------------------------/");
 
 			Beb1 = MenuOpcao.sc.nextInt();
 			if (Beb1 == 1) {
@@ -66,9 +66,9 @@ public class Bebidas {
 				T1 = false;
 		} while (Beb1 != 0 && Beb1 != 1);
 		do {
-			System.out.println("\n/-------------------------------------\\");
+			//System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar Refrigerante?");
-			System.out.println("\\-------------------------------------/");
+			//System.out.println("\\-------------------------------------/");
 
 			Beb2 = MenuOpcao.sc.nextInt();
 			if (Beb2 == 1) {
@@ -77,9 +77,9 @@ public class Bebidas {
 				T2 = false;
 		} while (Beb2 != 0 && Beb2 != 1);
 		do {
-			System.out.println("\n/-------------------------------------\\");
+			//System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar Suco?");
-			System.out.println("\\-------------------------------------/");
+			//System.out.println("\\-------------------------------------/");
 
 			Beb3 = MenuOpcao.sc.nextInt();
 			if (Beb3 == 1) {
@@ -87,9 +87,9 @@ public class Bebidas {
 			} else
 				T3 = false;
 		} while (Beb3 != 0 && Beb3 != 1);
-		System.out.println("\n/-------------------------------------\\");
+		//System.out.println("\n/-------------------------------------\\");
 		System.out.println("Você gostaria de comprar Água");
-		System.out.println("\\-------------------------------------/");
+		//System.out.println("\\-------------------------------------/");
 
 		do {
 			Beb4 = MenuOpcao.sc.nextInt();
@@ -100,9 +100,9 @@ public class Bebidas {
 		} while (Beb4 != 0 && Beb4 != 1);
 
 		do {
-			System.out.println("\n/-------------------------------------\\");
+			//System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar Caipirinha?");
-			System.out.println("\\-------------------------------------/");
+			//System.out.println("\\-------------------------------------/");
 
 			Beb5 = MenuOpcao.sc.nextInt();
 			if (Beb5 == 1) {
@@ -112,43 +112,42 @@ public class Bebidas {
 		} while (Beb5 != 0 && Beb5 != 1);
 
 		if (T1 == true) {
-			System.out.println("\n/-------------------------------------\\");
-			System.out.println("Você selecionou Cerveja");
+			//System.out.println("\n/-------------------------------------\\");
+			//System.out.println("Você selecionou Cerveja");
 			BebidasSelecionadas.add("Cerveja");
-		} else
-			System.out.println("\n/-------------------------------------\\\n" + "Você não selecionou Cerveja");
+		}// else
+			//System.out.println("\n/-------------------------------------\\\n" + "Você não selecionou Cerveja");
 
 		if (T2 == true) {
-			System.out.println("Você selecionou Refrigerante");
+			//System.out.println("Você selecionou Refrigerante");
 			BebidasSelecionadas.add("Refrigerante");
-		} else
-			System.out.println("Você não selecionou Refrigerante");
+		}// else
+			//System.out.println("Você não selecionou Refrigerante");
 		if (T3 == true) {
-			System.out.println("Você selecionou Suco");
+			//System.out.println("Você selecionou Suco");
 			BebidasSelecionadas.add("Suco");
-		} else
-			System.out.println("Você não selecionou Suco");
+		} //else
+			//System.out.println("Você não selecionou Suco");
 		if (T4 == true) {
-			System.out.println("Você selecionou Água");
+			//System.out.println("Você selecionou Água");
 			BebidasSelecionadas.add("Água");
-		} else
-			System.out.println("Você não selecionou Água");
+		} //else
+			//System.out.println("Você não selecionou Água");
 		if (T5 == true) {
-			System.out.println("Você selecionou Caipirinha" + "\n\\\\-------------------------------------/");
+			//System.out.println("Você selecionou Caipirinha" + "\n\\\\-------------------------------------/");
 			BebidasSelecionadas.add("Caipirinha");
-		} else
-			System.out.println("Você não selecionou Caipirinha" + "\n\\\\-------------------------------------/");
-	BebidasMLTotal = Cadastro.quantosNomes * BebidaPessoa;
-	if (BebidasMLTotal == 0) {
-		System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
-				+ "Volte para o menu e cadastre os participantes. ");
-	} else {
-		System.out.println("Você deve comprar: " + BebidasMLTotal / 1000 + "L de bebidas, sendo elas: ");
-		for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
-			System.out.println(
-					k + 1 + ". " + df.format((BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size())
-							+ "L de " + Bebidas.BebidasSelecionadas.get(k));
-		}
+		}// else
+			//System.out.println("Você não selecionou Caipirinha" + "\n\\\\-------------------------------------/");
+		
+		System.out.println("\n/--------------------------------------------------\\");
+		System.out.println(" 	LISTA DE BEBIDAS SELECIONADAS");
+		System.out.println("\\--------------------------------------------------/");
+		for (int l = 0; l < BebidasSelecionadas.size(); l++) {
+			System.out.println(l + 1 + ". " + BebidasSelecionadas.get(l));		
+		}	
+	
+
 	
 	}
-}}
+
+}
