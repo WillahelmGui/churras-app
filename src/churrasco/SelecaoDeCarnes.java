@@ -118,5 +118,6 @@ public class SelecaoDeCarnes {
 			System.out.println("Você não selecionou Faraldinha" + "\n\\\\-------------------------------------/");
 
 		Bebidas.selecao();
+		Calculokg.kgGrama();
 	}
 }

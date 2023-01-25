@@ -11,17 +11,17 @@ public class Calculokg {
 
 	public static void kgGrama() {
 		System.out.println("\n/--------------------------------------------------\\");
-		System.out.println(" 		CÁLCULO SELECIONADO");
+		System.out.println(" 		CÁLCULO INICIALIZADO");
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println(
 				"Considerando que cada pessoa bebe 1,4L e come aprox 550G no churrasco, \n" + "Você deve comprar:");
-		CarnePesoTotal = Cadastro.nome.size() * CarnePessoa;
+		CarnePesoTotal = Cadastro.quantosNomes * CarnePessoa;
 		if (CarnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
 		} else {
-			System.out.println(CarnePesoTotal / 1000 + "Kg de carne");
+			System.out.println("Você deve comprar: " + CarnePesoTotal / 1000 + "Kg de carne, sendo eles: ");
 			
 		}
 

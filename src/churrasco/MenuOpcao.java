@@ -11,8 +11,7 @@ public class MenuOpcao {
 		System.out.println("Escolha uma das opções");
 		System.out.println("1. Cadastro");
 		System.out.println("2. Seleção de Carnes");
-		System.out.println("3. Cálculo");
-		System.out.println("4. Sair");
+		System.out.println("3. Sair");
 		System.out.println("--------------------------");
 		
 
@@ -25,7 +24,7 @@ public class MenuOpcao {
 		byte opcaoEscolhida = -1;
 		
 
-		while (opcaoEscolhida != 4) {
+		while (opcaoEscolhida != 3) {
 			menuopcao();
 			opcaoEscolhida = sc.nextByte();
 
@@ -37,11 +36,8 @@ public class MenuOpcao {
 				SelecaoDeCarnes.selecao();
 				break;
 			case 3:
-				Calculokg.kgGrama();
+				System.out.println("Aplicação encerrada.");
 				break;
-			case 4:
-				break;
-
 			default:
 				System.out.println("digite um numero valido");
 				break;
