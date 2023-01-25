@@ -3,18 +3,25 @@ package churrasco;
 import java.util.ArrayList;
 
 public class SelecaoDeCarnes {
+	// Variáveis para as perguntas
 	static int C1;
 	static int C2;
 	static int C3;
 	static int C4;
 	static int C5;
-
+	// Varíáveis para cada boolean
 	static boolean B1;
 	static boolean B2;
 	static boolean B3;
 	static boolean B4;
 	static boolean B5;
-
+	// Variáveis para os preços;
+	static double P1 = 67.99;
+	static double P2 = 27.34;
+	static double P3 = 17.99;
+	static double P4 = 20.99;
+	static double P5 = 32.99;
+	static ArrayList<Double> precos;
 	static ArrayList<String> produtosSelecionados;
 
 	public static void chamarSelecao() {
@@ -31,13 +38,15 @@ public class SelecaoDeCarnes {
 		ListaDeProdutos.add("Asinha de Frango");
 		ListaDeProdutos.add("Linguiça");
 		ListaDeProdutos.add("Fraldinha");
-		// Declara a ArrayList "Produtos Selecionados".
-		produtosSelecionados = new ArrayList<String>();
+
 		for (int j = 0; j < ListaDeProdutos.size(); j++) {
 
 			System.out.println(j + 1 + ". " + ListaDeProdutos.get(j));
 		}
-
+		// Declara a ArrayList "Produtos Selecionados".
+		produtosSelecionados = new ArrayList<String>();
+		// Declara a List "precos".
+		precos = new ArrayList<>();
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println("Escolha as carnes desejadas");
 		System.out.println("Para escolher as carnes desejadas digite:");
@@ -107,30 +116,35 @@ public class SelecaoDeCarnes {
 		} while (C5 != 0 && C5 != 1);
 		if (B1 == true) {
 			System.out.println("\n/-------------------------------------\\");
-			System.out.println("Você selecionou Picanha");
+			System.out.println("Você selecionou Picanha - R$66.79");
 			produtosSelecionados.add("Picanha");
+			precos.add(66.79);
 		} else
 			System.out.println("\n/-------------------------------------\\\n" + "Você não selecionou  Picanha");
 
 		if (B2 == true) {
 			System.out.println("Você selecionou Costela");
 			produtosSelecionados.add("Costela");
+			precos.add(27.34);
+			System.out.println(precos);
 		} else
 			System.out.println("Você não selecionou Costela");
 		if (B3 == true) {
 			System.out.println("Você selecionou Asinha de Frango");
 			produtosSelecionados.add("Asinha de Frango");
+			precos.add(17.99);
 		} else
 			System.out.println("Você não selecionou Asinha de Frango");
 		if (B4 == true) {
 			System.out.println("Você selecionou Linguiça");
 			produtosSelecionados.add("Linguiça");
+			precos.add(20.99);
 		} else
 			System.out.println("Você não selecionou Linguiça");
 		if (B5 == true) {
 			System.out.println("Você selecionou Fraldinha" + "\n\\\\-------------------------------------/");
 			produtosSelecionados.add("Fraldinha");
-
+			precos.add(32.99);
 		} else
 			System.out.println("Você não selecionou Faraldinha" + "\n\\\\-------------------------------------/");
 

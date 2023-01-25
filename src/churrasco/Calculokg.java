@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Calculokg {
 
 	static double CarnePessoa = 550;
-	static double BebidaPessoa = 1400;
+
 	static double CarnePesoTotal;
 
 	public static void kgGrama() {
@@ -27,8 +27,9 @@ public class Calculokg {
 				System.out.println(
 						j + 1 + ". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarnes.produtosSelecionados.size())
 								+ "Kg de " + SelecaoDeCarnes.produtosSelecionados.get(j));
+				System.out.println("O preço das carnes será: ");
+				//Não feito ainda
 			}
 		}
-
 	}
 }
