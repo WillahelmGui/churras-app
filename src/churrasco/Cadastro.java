@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 public class Cadastro {
 	static int quantosNomes;
+
 	public static void CadastroClass() {
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println(" 		CADASTRO SELECIONADO");
 		System.out.println("\\--------------------------------------------------/");
-
-		
 
 		System.out.println("quantas pessoas comparecerão? ");
 		quantosNomes = MenuOpcao.sc.nextInt();
