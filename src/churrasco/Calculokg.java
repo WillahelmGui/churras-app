@@ -35,7 +35,7 @@ public class Calculokg {
 								+ "Kg de " + SelecaoDeCarnes.produtosSelecionados.get(j));
 				
 			}
-			System.out.println("Kg total de carnes: " + CarnePesoTotal / 1000 + " Kg.");	
+			System.out.println("Kg total de carnes: " + CarnePesoTotal / 1000 + "Kg.");	
 			System.out.println("Preço total das carnes: "); //Não feito ainda
 		}
 	
