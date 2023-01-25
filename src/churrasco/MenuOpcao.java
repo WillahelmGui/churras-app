@@ -4,49 +4,43 @@ import java.util.Scanner;
 
 public class MenuOpcao {
 
-	Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
 
 	public static void menuopcao() {
-		
-		System.out.println("escolha uma das opcao");
-		System.out.println("01  calcular");
-		System.out.println("0  sair");
-		
+		System.out.println("\n--------------------------");
+		System.out.println("Escolha uma das opções");
+		System.out.println("1. Cadastro");
+		System.out.println("2. Seleção de Carnes e Cálculo");
+		System.out.println("3. Sair");
+		System.out.println("--------------------------");
 
 	}
-		
 
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
+
 		byte opcaoEscolhida = -1;
-		menuopcao();
 
-		while (opcaoEscolhida != 1) {
-
+		while (opcaoEscolhida != 3) {
+			menuopcao();
 			opcaoEscolhida = sc.nextByte();
 
 			switch (opcaoEscolhida) {
 			case 1:
-				calculo.calcular();
+				Cadastro.CadastroClass();
 				break;
-			case 2:Calculokg.kgGrama();
-
+			case 2:
+				SelecaoDeCarnes.chamarSelecao();
 				break;
 			case 3:
-
+				System.out.println("Aplicação encerrada.");
 				break;
-			case 4:
-				
-				break;
-
 			default:
-				System.out.println("digite um numero valido" + opcaoEscolhida);
+				System.out.println("digite um numero valido");
 				break;
 			}
-		
-		}
 
+		}
+		sc.close();
 	}
 
 }
