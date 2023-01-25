@@ -16,11 +16,6 @@ public class SelecaoDeCarnes {
 	static boolean B4;
 	static boolean B5;
 	// Variáveis para os preços;
-	static double P1 = 67.99;
-	static double P2 = 27.34;
-	static double P3 = 17.99;
-	static double P4 = 20.99;
-	static double P5 = 32.99;
 	static ArrayList<Double> precos;
 	static ArrayList<String> produtosSelecionados;
 
