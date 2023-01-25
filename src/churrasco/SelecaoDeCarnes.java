@@ -112,7 +112,7 @@ public class SelecaoDeCarnes {
 		
 		
 		System.out.println("\n/--------------------------------------------------\\");
-		System.out.println(" 	LISTA DE CARNES E BEBIDAS SELECIONADAS");
+		System.out.println(" 	LISTA DE CARNES SELECIONADAS");
 		System.out.println("\\--------------------------------------------------/");
 		if (B1 == true) {
 			//System.out.println("Você selecionou Picanha");
