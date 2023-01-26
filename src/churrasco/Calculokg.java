@@ -39,23 +39,17 @@ public class Calculokg {
 		System.out.println(" ");
 
 		Bebidas.BebidasMLTotal = Cadastro.quantosNomes * Bebidas.BebidaPessoa;
-		if (Bebidas.BebidasMLTotal == 0) {
-			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
-					+ "Volte para o menu e cadastre os participantes. ");
-		} else {
-
-			for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
-				System.out.println(
-						k + 1 + ". " + df.format((Bebidas.BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size())
-								+ "L de " + Bebidas.BebidasSelecionadas.get(k));
-			}
-			System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
-			System.out.println("Preço total das bebidas: "); // Não feito ainda
-
+		if (Bebidas.BebidasMLTotal != 0) {
+			if (Bebidas.BebidasSelecionadas != null) {
+				for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
+					System.out.println(k + 1 + ". "
+							+ df.format((Bebidas.BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size()) + "L de "
+							+ Bebidas.BebidasSelecionadas.get(k));
+				}
+				System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
+				System.out.println("Preço total das bebidas: "); // Não feito ainda
+			} 
 		}
-
-		System.out.println(" ");
-		System.out.println(" ");
 
 	}
 }
