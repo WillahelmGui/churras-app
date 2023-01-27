@@ -28,11 +28,11 @@ public class SelecaoDeCarnes {
 
 		// Declara a ArrayList "Lista de Produtos".
 		ArrayList<String> ListaDeProdutos = new ArrayList<String>();
-		ListaDeProdutos.add("Picanha");
-		ListaDeProdutos.add("Costela");
-		ListaDeProdutos.add("Asinha de Frango");
-		ListaDeProdutos.add("Linguiça");
-		ListaDeProdutos.add("Fraldinha");
+		ListaDeProdutos.add("Picanha 		66.79Kg");
+		ListaDeProdutos.add("Costela 		27.34Kg");
+		ListaDeProdutos.add("Asinha de Frango 	17.99Kg");
+		ListaDeProdutos.add("Linguiça 		20.99Kg");
+		ListaDeProdutos.add("Fraldinha		32.99Kg");
 
 		for (int j = 0; j < ListaDeProdutos.size(); j++) {
 
