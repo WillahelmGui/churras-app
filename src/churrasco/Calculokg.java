@@ -28,7 +28,7 @@ public class Calculokg {
 			for (int j = 0; j < SelecaoDeCarnes.produtosSelecionados.size(); j++) {
 
 				System.out.println(
-						j + 1 + ". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarnes.produtosSelecionados.size())
+						". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarnes.produtosSelecionados.size())
 								+ "Kg de " + SelecaoDeCarnes.produtosSelecionados.get(j));
 
 			}
@@ -39,6 +39,7 @@ public class Calculokg {
 		System.out.println(" ");
 
 		Bebidas.BebidasMLTotal = Cadastro.quantosNomes * Bebidas.BebidaPessoa;
+<<<<<<< HEAD
 		if (Bebidas.BebidasMLTotal != 0) {
 			if (Bebidas.BebidasSelecionadas != null) {
 				for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
@@ -51,5 +52,40 @@ public class Calculokg {
 			} 
 		}
 
+=======
+		
+		 if (Bebidas.BebidasMLTotal == 0) {
+			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
+					+ "Volte para o menu e cadastre os participantes. ");
+		}else {
+			
+			if(Bebidas.BebidasSelecionadas == null) {
+				System.out.println("0 Bebidas");
+			}else {
+				
+			
+
+			for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
+				System.out.println(
+						". " + df.format((Bebidas.BebidasMLTotal / 1000) / Bebidas.BebidasSelecionadas.size())
+								+ "L de " + Bebidas.BebidasSelecionadas.get(k));
+			}
+			
+			System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
+			System.out.println("Preço total das bebidas: "); // Não feito ainda
+		
+
+
+		}
+		}
+
+		System.out.println(" ");
+		System.out.println(" ");
+
+
+
+>>>>>>> 20fc1257b23c80d60e42aef43b6454280edf083f
 	}
+	
 }
+
