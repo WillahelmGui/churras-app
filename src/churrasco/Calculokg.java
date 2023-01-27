@@ -5,13 +5,13 @@ import java.text.DecimalFormat;
 public class Calculokg {
 
 	static double CarnePessoa = 550;
-
 	static double CarnePesoTotal;
 
+	static Double PrecoTotalCarnes = 0.0;
 	public static void kgGrama() {
 		DecimalFormat df = new DecimalFormat("0.00");
 		System.out.println("\n/--------------------------------------------------\\");
-		System.out.println(" 		CÁLCULO INICIALIZADO");
+
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println(" Considerando que cada pessoa bebe 1,4L \n e come aproximadamente 550G no churrasco \n");
@@ -32,8 +32,11 @@ public class Calculokg {
 								+ "Kg de " + SelecaoDeCarnes.produtosSelecionados.get(j));
 
 			}
+			for (double n: SelecaoDeCarnes.precos){
+				PrecoTotalCarnes += n;
+			}
 			System.out.println("Kg total de carnes: " + CarnePesoTotal / 1000 + "Kg.");
-			System.out.println("Preço total das carnes: "); // Não feito ainda
+			System.out.println("Preço total das carnes: " + PrecoTotalCarnes); // Não feito ainda
 		}
 
 		System.out.println(" ");
@@ -48,6 +51,7 @@ public class Calculokg {
 							+ Bebidas.BebidasSelecionadas.get(k));
 				}
 				System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
+				
 				System.out.println("Preço total das bebidas: "); // Não feito ainda
 			}
 		}
@@ -56,9 +60,7 @@ public class Calculokg {
 			System.out.println(" ");
 		} else {
 
-			if (Bebidas.BebidasSelecionadas == null) {
-				System.out.println("0 Bebidas");
-			} else {
+			if (Bebidas.BebidasSelecionadas != null) {
 
 				for (int k = 0; k < Bebidas.BebidasSelecionadas.size(); k++) {
 					System.out.println(
@@ -69,6 +71,8 @@ public class Calculokg {
 				System.out.println("Litros total de Bebidas: " + Bebidas.BebidasMLTotal / 1000 + "L");
 				System.out.println("Preço total das bebidas: "); // Não feito ainda
 
+			} else {
+				System.out.println("0 Bebidas");
 			}
 		}
 
