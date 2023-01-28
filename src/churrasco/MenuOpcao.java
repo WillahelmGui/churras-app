@@ -1,40 +1,48 @@
 package churrasco;
 
 public class MenuOpcao {
+
+	private final static int OPCAO_CADASTRAR_PARTICIPANTE = 1;
+	private final static int OPCAO_CADASTRAR_SELECAO_DE_CARNE = 2;
+	private final static int OPCAO_SAIR_PROGRAMA = 3;
+	
 	
 	public void iniciar() {
-		byte opcaoEscolhida = -1;
+		
+		byte opcaoEscolhida;
 
-		while (opcaoEscolhida != 3) {
-			mostrarListaOpcao();
+		do {
+			String texto = pegarTextoDaListaOpcao();
+			System.out.println(texto);
+			
 			opcaoEscolhida = LeitorDeDado.sc.nextByte();
 
 			switch (opcaoEscolhida) {
-			case 1:
+			case OPCAO_CADASTRAR_PARTICIPANTE:
 				CadastroParticipante.CadastroClass();
 				break;
-			case 2:
+			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
 				SelecaoDeCarne.chamarSelecao();
 				break;
-			case 3:
+			case OPCAO_SAIR_PROGRAMA:
 				System.out.println("Aplicação encerrada.");
 				break;
 			default:
 				System.out.println("digite um numero valido");
 				break;
 			}
-
-		}
+		} while (opcaoEscolhida != OPCAO_SAIR_PROGRAMA);
+				
 		LeitorDeDado.sc.close();
 	}
 	
-	public void mostrarListaOpcao() {
-		System.out.println("\n--------------------------");
-		System.out.println("Escolha uma das opções");
-		System.out.println("1. Cadastro");
-		System.out.println("2. Seleção de Carnes e Cálculo");
-		System.out.println("3. Sair");
-		System.out.println("--------------------------");
-
+	public String pegarTextoDaListaOpcao() {
+		
+		return "\n--------------------------"
+				+ "\nEscolha uma das opções"
+				+ "\n1. Cadastro"
+				+ "\n2. Seleção de Carnes e Cálculo"
+				+ "\n3. Sair"
+				+ "\n--------------------------";
 	}
 }
