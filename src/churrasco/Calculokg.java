@@ -16,14 +16,14 @@ public class Calculokg {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println(" Considerando que cada pessoa bebe 1,4L \n e come aproximadamente 550G no churrasco \n");
-		CarnePesoTotal = CadastroParticipante.quantosNomes * CarnePessoa;
+		CarnePesoTotal = Convidado.quantosNomes * CarnePessoa;
 		if (CarnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
 		} else {
 			System.out.println(" ");
 			System.out.println("\n/--------------------------------------------------\\");
-			System.out.println("    CADA UM DOS " + CadastroParticipante.quantosNomes + " PARTICIPANTES DEVEM COMPRAR: ");
+			System.out.println("    CADA UM DOS " + Convidado.quantosNomes + " PARTICIPANTES DEVEM COMPRAR: ");
 			System.out.println("\\--------------------------------------------------/");
 
 			for (int j = 0; j < SelecaoDeCarne.produtosSelecionados.size(); j++) {
@@ -42,7 +42,7 @@ public class Calculokg {
 
 		System.out.println(" ");
 
-		Bebida.BebidasMLTotal = CadastroParticipante.quantosNomes * Bebida.BebidaPessoa;
+		Bebida.BebidasMLTotal = Convidado.quantosNomes * Bebida.BebidaPessoa;
 
 		if (Bebida.BebidasMLTotal != 0) {
 			if (Bebida.BebidasSelecionadas != null) {

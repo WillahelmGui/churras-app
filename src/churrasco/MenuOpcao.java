@@ -2,10 +2,10 @@ package churrasco;
 
 public class MenuOpcao {
 
-	private final static int OPCAO_CADASTRAR_PARTICIPANTE = 1;
-	private final static int OPCAO_CADASTRAR_SELECAO_DE_CARNE = 2;
-	private final static int OPCAO_SAIR_PROGRAMA = 3;
-	
+	private final static int OPCAO_CADASTRAR_CONVIDADO = 1;
+	private final static int OPCAO_LISTAR_CONVIDADO = 2;
+	private final static int OPCAO_CADASTRAR_SELECAO_DE_CARNE = 3;
+	private final static int OPCAO_SAIR_PROGRAMA = 4;
 	
 	public void iniciar() {
 		
@@ -18,12 +18,16 @@ public class MenuOpcao {
 			opcaoEscolhida = LeitorDeDado.sc.nextByte();
 
 			switch (opcaoEscolhida) {
-			case OPCAO_CADASTRAR_PARTICIPANTE:
-				CadastroParticipante.CadastroClass();
+			case OPCAO_CADASTRAR_CONVIDADO:
+				Convidado.cadastrar();
+				break;
+			case OPCAO_LISTAR_CONVIDADO: 
+				Convidado.listar();
 				break;
 			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
 				SelecaoDeCarne.chamarSelecao();
 				break;
+				
 			case OPCAO_SAIR_PROGRAMA:
 				System.out.println("Aplicação encerrada.");
 				break;
@@ -39,10 +43,11 @@ public class MenuOpcao {
 	public String pegarTextoDaListaOpcao() {
 		
 		return "\n--------------------------"
-				+ "\nEscolha uma das opções"
-				+ "\n1. Cadastro"
-				+ "\n2. Seleção de Carnes e Cálculo"
-				+ "\n3. Sair"
+				+ "\nEscolha uma das opções\n"
+				+ OPCAO_CADASTRAR_CONVIDADO + ". Cadastro de Convidado"
+				+ "\n2. Lista de Convidado"
+				+ "\n3. Seleção de Carnes e Cálculo"
+				+ "\n4. Sair"
 				+ "\n--------------------------";
 	}
 }
