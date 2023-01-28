@@ -2,7 +2,7 @@ package churrasco;
 
 import java.util.ArrayList;
 
-public class Cadastro {
+public class CadastroParticipante {
 	static int quantosNomes;
 
 	public static void CadastroClass() {
@@ -11,11 +11,11 @@ public class Cadastro {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println("quantas pessoas comparecerão? ");
-		quantosNomes = MenuOpcao.sc.nextInt();
+		quantosNomes = Application.sc.nextInt();
 		ArrayList<String> nome = new ArrayList<>();
 		for (int i = 1; i <= quantosNomes; i++) {
 			System.out.println("digite o nome dos participantes: ");
-			nome.add(MenuOpcao.sc.next() + MenuOpcao.sc.nextLine());
+			nome.add(Application.sc.next() + Application.sc.nextLine());
 
 		}
 		System.out.println("\n/--------------------------------------------------\\");

@@ -2,7 +2,7 @@ package churrasco;
 
 import java.util.ArrayList;
 
-public class SelecaoDeCarnes {
+public class SelecaoDeCarne {
 	// Variáveis para as perguntas
 	static int C1;
 	static int C2;
@@ -52,7 +52,7 @@ public class SelecaoDeCarnes {
 		// Sequência de perguntas a respeito das carnes.
 		do {
 			System.out.println("Você gostaria de comprar Picanha?");
-			SelecaoDeCarnes.C1 = MenuOpcao.sc.nextInt();
+			SelecaoDeCarne.C1 = Application.sc.nextInt();
 
 			if (C1 == 1) {
 				B1 = true;
@@ -63,7 +63,7 @@ public class SelecaoDeCarnes {
 		do {
 			System.out.println("Você gostaria de comprar Costela?");
 
-			SelecaoDeCarnes.C2 = MenuOpcao.sc.nextInt();
+			SelecaoDeCarne.C2 = Application.sc.nextInt();
 
 			if (C2 == 1) {
 				B2 = true;
@@ -74,7 +74,7 @@ public class SelecaoDeCarnes {
 		do {
 			System.out.println("Você gostaria de comprar Asinha de Frango?");
 
-			SelecaoDeCarnes.C3 = MenuOpcao.sc.nextInt();
+			SelecaoDeCarne.C3 = Application.sc.nextInt();
 			if (C3 == 1) {
 				B3 = true;
 			} else
@@ -83,7 +83,7 @@ public class SelecaoDeCarnes {
 		System.out.println("Você gostaria de comprar Linguiça");
 
 		do {
-			SelecaoDeCarnes.C4 = MenuOpcao.sc.nextInt();
+			SelecaoDeCarne.C4 = Application.sc.nextInt();
 			if (C4 == 1) {
 				B4 = true;
 			} else
@@ -94,7 +94,7 @@ public class SelecaoDeCarnes {
 			System.out.println("Você gostaria de comprar Fraldinha?");
 	
 
-			SelecaoDeCarnes.C5 = MenuOpcao.sc.nextInt();
+			SelecaoDeCarne.C5 = Application.sc.nextInt();
 			if (C5 == 1) {
 				B5 = true;
 			} else
@@ -130,7 +130,7 @@ public class SelecaoDeCarnes {
 		for (int k = 0; k < produtosSelecionados.size(); k++) {
 			System.out.println(k + 1 + ". " + produtosSelecionados.get(k));
 		}
-		Bebidas.selecao();
+		Bebida.selecao();
 		Calculokg.kgGrama();
 
 	}

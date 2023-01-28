@@ -3,7 +3,8 @@ package churrasco;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class Bebidas {
+public class Bebida {
+	
 	static int Beb1;
 	static int Beb2;
 	static int Beb3;
@@ -31,10 +32,10 @@ public class Bebidas {
 			System.out.println("Você gostaria de comprar bebidas?");
 			System.out.println("1. Sim 0. Não");
 			System.out.println("\\-------------------------------------/");
-			switch (kp = MenuOpcao.sc.nextByte()) {
+			switch (kp = Application.sc.nextByte()) {
 			// Código quando o usuário aceitar.
 			case 1:
-				Bebidas.mostrarBebidas();
+				Bebida.mostrarBebidas();
 				break;
 			// Código quando o usuário negar.
 			case 0:
@@ -59,7 +60,7 @@ public class Bebidas {
 			System.out.println("Você gostaria de comprar Cerveja?");
 		//	System.out.println("\\-------------------------------------/");
 
-			Beb1 = MenuOpcao.sc.nextInt();
+			Beb1 = Application.sc.nextInt();
 			if (Beb1 == 1) {
 				T1 = true;
 			} else
@@ -70,7 +71,7 @@ public class Bebidas {
 			System.out.println("Você gostaria de comprar Refrigerante?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb2 = MenuOpcao.sc.nextInt();
+			Beb2 = Application.sc.nextInt();
 			if (Beb2 == 1) {
 				T2 = true;
 			} else
@@ -81,7 +82,7 @@ public class Bebidas {
 			System.out.println("Você gostaria de comprar Suco?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb3 = MenuOpcao.sc.nextInt();
+			Beb3 = Application.sc.nextInt();
 			if (Beb3 == 1) {
 				T3 = true;
 			} else
@@ -92,7 +93,7 @@ public class Bebidas {
 		//System.out.println("\\-------------------------------------/");
 
 		do {
-			Beb4 = MenuOpcao.sc.nextInt();
+			Beb4 = Application.sc.nextInt();
 			if (Beb4 == 1) {
 				T4 = true;
 			} else
@@ -104,7 +105,7 @@ public class Bebidas {
 			System.out.println("Você gostaria de comprar Caipirinha?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb5 = MenuOpcao.sc.nextInt();
+			Beb5 = Application.sc.nextInt();
 			if (Beb5 == 1) {
 				T5 = true;
 			} else

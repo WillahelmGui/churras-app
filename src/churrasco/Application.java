@@ -2,7 +2,7 @@ package churrasco;
 
 import java.util.Scanner;
 
-public class MenuOpcao {
+public class Application {
 
 	static Scanner sc = new Scanner(System.in);
 
@@ -26,10 +26,10 @@ public class MenuOpcao {
 
 			switch (opcaoEscolhida) {
 			case 1:
-				Cadastro.CadastroClass();
+				CadastroParticipante.CadastroClass();
 				break;
 			case 2:
-				SelecaoDeCarnes.chamarSelecao();
+				SelecaoDeCarne.chamarSelecao();
 				break;
 			case 3:
 				System.out.println("Aplicação encerrada.");
