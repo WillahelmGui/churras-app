@@ -52,7 +52,7 @@ public class SelecaoDeCarne {
 		// Sequência de perguntas a respeito das carnes.
 		do {
 			System.out.println("Você gostaria de comprar Picanha?");
-			SelecaoDeCarne.C1 = Application.sc.nextInt();
+			SelecaoDeCarne.C1 = LeitorDeDado.sc.nextInt();
 
 			if (C1 == 1) {
 				B1 = true;
@@ -63,7 +63,7 @@ public class SelecaoDeCarne {
 		do {
 			System.out.println("Você gostaria de comprar Costela?");
 
-			SelecaoDeCarne.C2 = Application.sc.nextInt();
+			SelecaoDeCarne.C2 = LeitorDeDado.sc.nextInt();
 
 			if (C2 == 1) {
 				B2 = true;
@@ -74,7 +74,7 @@ public class SelecaoDeCarne {
 		do {
 			System.out.println("Você gostaria de comprar Asinha de Frango?");
 
-			SelecaoDeCarne.C3 = Application.sc.nextInt();
+			SelecaoDeCarne.C3 = LeitorDeDado.sc.nextInt();
 			if (C3 == 1) {
 				B3 = true;
 			} else
@@ -83,7 +83,7 @@ public class SelecaoDeCarne {
 		System.out.println("Você gostaria de comprar Linguiça");
 
 		do {
-			SelecaoDeCarne.C4 = Application.sc.nextInt();
+			SelecaoDeCarne.C4 = LeitorDeDado.sc.nextInt();
 			if (C4 == 1) {
 				B4 = true;
 			} else
@@ -94,7 +94,7 @@ public class SelecaoDeCarne {
 			System.out.println("Você gostaria de comprar Fraldinha?");
 	
 
-			SelecaoDeCarne.C5 = Application.sc.nextInt();
+			SelecaoDeCarne.C5 = LeitorDeDado.sc.nextInt();
 			if (C5 == 1) {
 				B5 = true;
 			} else

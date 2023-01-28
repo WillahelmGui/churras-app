@@ -32,7 +32,7 @@ public class Bebida {
 			System.out.println("Você gostaria de comprar bebidas?");
 			System.out.println("1. Sim 0. Não");
 			System.out.println("\\-------------------------------------/");
-			switch (kp = Application.sc.nextByte()) {
+			switch (kp = LeitorDeDado.sc.nextByte()) {
 			// Código quando o usuário aceitar.
 			case 1:
 				Bebida.mostrarBebidas();
@@ -60,7 +60,7 @@ public class Bebida {
 			System.out.println("Você gostaria de comprar Cerveja?");
 		//	System.out.println("\\-------------------------------------/");
 
-			Beb1 = Application.sc.nextInt();
+			Beb1 = LeitorDeDado.sc.nextInt();
 			if (Beb1 == 1) {
 				T1 = true;
 			} else
@@ -71,7 +71,7 @@ public class Bebida {
 			System.out.println("Você gostaria de comprar Refrigerante?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb2 = Application.sc.nextInt();
+			Beb2 = LeitorDeDado.sc.nextInt();
 			if (Beb2 == 1) {
 				T2 = true;
 			} else
@@ -82,7 +82,7 @@ public class Bebida {
 			System.out.println("Você gostaria de comprar Suco?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb3 = Application.sc.nextInt();
+			Beb3 = LeitorDeDado.sc.nextInt();
 			if (Beb3 == 1) {
 				T3 = true;
 			} else
@@ -93,7 +93,7 @@ public class Bebida {
 		//System.out.println("\\-------------------------------------/");
 
 		do {
-			Beb4 = Application.sc.nextInt();
+			Beb4 = LeitorDeDado.sc.nextInt();
 			if (Beb4 == 1) {
 				T4 = true;
 			} else
@@ -105,7 +105,7 @@ public class Bebida {
 			System.out.println("Você gostaria de comprar Caipirinha?");
 			//System.out.println("\\-------------------------------------/");
 
-			Beb5 = Application.sc.nextInt();
+			Beb5 = LeitorDeDado.sc.nextInt();
 			if (Beb5 == 1) {
 				T5 = true;
 			} else

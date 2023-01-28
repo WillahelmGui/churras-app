@@ -11,11 +11,11 @@ public class CadastroParticipante {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println("quantas pessoas comparecerão? ");
-		quantosNomes = Application.sc.nextInt();
+		quantosNomes = LeitorDeDado.sc.nextInt();
 		ArrayList<String> nome = new ArrayList<>();
 		for (int i = 1; i <= quantosNomes; i++) {
 			System.out.println("digite o nome dos participantes: ");
-			nome.add(Application.sc.next() + Application.sc.nextLine());
+			nome.add(LeitorDeDado.sc.next() + LeitorDeDado.sc.nextLine());
 
 		}
 		System.out.println("\n/--------------------------------------------------\\");
