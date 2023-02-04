@@ -19,10 +19,10 @@ public class MenuOpcao {
 
 			switch (opcaoEscolhida) {
 			case OPCAO_CADASTRAR_CONVIDADO:
-				Convidado.cadastrar();
+				ServicoConvidado.cadastrar();
 				break;
 			case OPCAO_LISTAR_CONVIDADO: 
-				Convidado.listar();
+				ServicoConvidado.listar();
 				break;
 			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
 				SelecaoDeCarne.chamarSelecao();

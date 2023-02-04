@@ -4,10 +4,10 @@ import java.text.DecimalFormat;
 
 public class Calculokg {
 
-	static double CarnePessoa = 550;
-	static double CarnePesoTotal;
+	static final double CARNE_PESSOA = 0.55;
+	static double carnePesoTotal;
 
-	static Double PrecoTotalCarnes = 0.0;
+	static Double precoTotalCarnes = 0.0;
 	
 	public static void kgGrama() {
 		DecimalFormat df = new DecimalFormat("0.00");
@@ -16,33 +16,31 @@ public class Calculokg {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println(" Considerando que cada pessoa bebe 1,4L \n e come aproximadamente 550G no churrasco \n");
-		CarnePesoTotal = Convidado.quantosNomes * CarnePessoa;
-		if (CarnePesoTotal == 0) {
+		carnePesoTotal = ServicoConvidado.pegarQuantidadeConvidados() * CARNE_PESSOA;
+		double qtdCarnePorPessoa =  carnePesoTotal / SelecaoDeCarne.pegarQuantidadeCarnesSelecionadas();
+
+		if (carnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
 		} else {
 			System.out.println(" ");
 			System.out.println("\n/--------------------------------------------------\\");
-			System.out.println("    CADA UM DOS " + Convidado.quantosNomes + " PARTICIPANTES DEVEM COMPRAR: ");
+			System.out.println("    CADA UM DOS " + ServicoConvidado.pegarQuantidadeConvidados() + " PARTICIPANTES DEVEM COMPRAR: ");
 			System.out.println("\\--------------------------------------------------/");
 
-			for (int j = 0; j < SelecaoDeCarne.produtosSelecionados.size(); j++) {
-
-				System.out
-						.println(". " + df.format((CarnePesoTotal / 1000) / SelecaoDeCarne.produtosSelecionados.size())
-								+ "Kg de " + SelecaoDeCarne.produtosSelecionados.get(j));
-
+			for (int j = 0; j < SelecaoDeCarne.pegarQuantidadeCarnesSelecionadas(); j++) {
+				String nomePrecoCarne = SelecaoDeCarne.pegarListaCarnes().get(j).nome + " " + SelecaoDeCarne.pegarListaCarnes().get(j).preco;
+				System.out.println(". " + qtdCarnePorPessoa + "Kg de " + nomePrecoCarne);
+				precoTotalCarnes += SelecaoDeCarne.pegarListaCarnes().get(j).preco * qtdCarnePorPessoa;
 			}
-			for (double n: SelecaoDeCarne.precos){
-				PrecoTotalCarnes += n;
-			}
-			System.out.println("Kg total de carnes: " + CarnePesoTotal / 1000 + "Kg.");
-			System.out.println("Preço total das carnes: " + PrecoTotalCarnes); // Não feito ainda
+			
+			System.out.println("Kg total de carnes: " + carnePesoTotal + "Kg.");
+			System.out.println("Preço total das carnes: " + precoTotalCarnes); // Não feito ainda
 		}
 
 		System.out.println(" ");
 
-		Bebida.BebidasMLTotal = Convidado.quantosNomes * Bebida.BebidaPessoa;
+		Bebida.BebidasMLTotal = ServicoConvidado.pegarQuantidadeConvidados() * Bebida.BebidaPessoa;
 
 		if (Bebida.BebidasMLTotal != 0) {
 			if (Bebida.BebidasSelecionadas != null) {
