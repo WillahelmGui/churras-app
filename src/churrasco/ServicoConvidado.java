@@ -5,26 +5,25 @@ import java.util.ArrayList;
 public class ServicoConvidado {
 	
 	private static ArrayList<Convidado> listaConvidados = new ArrayList<>();
-
+	private static final String SAIR_LISTA = "0";
+	
 	public static void cadastrar() {
 		
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println(" 		CADASTRO DE CONVIDADO SELECIONADO");
 		System.out.println("\\--------------------------------------------------/");
-
-		System.out.println("quantas pessoas comparecerão? ");
-		int quantosNomes = LeitorDeDado.sc.nextInt();
-		LeitorDeDado.sc.nextLine();
+		Convidado convidado = new Convidado();
 		
-		for (int i = 1; i <= quantosNomes; i++) {
-			System.out.println("digite o nome dos participantes: ");
+		do {
+			System.out.println("digite o nome dos participantes ou 0 para terminar o cadastro: ");
 			
-			Convidado convidado = new Convidado();
+			convidado = new Convidado();
 			convidado.nome = LeitorDeDado.sc.nextLine();
 			
-			listaConvidados.add(convidado);
-
-		}
+			if(!convidado.nome.equals(SAIR_LISTA)) {
+				listaConvidados.add(convidado);				
+			}
+		} while (!convidado.nome.equals(SAIR_LISTA));
 	}
 	
 	public static void listar() {

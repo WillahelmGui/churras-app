@@ -4,11 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SelecaoDeCarne {
-	
+
 	static final int SIM = 1;
 	static final int NAO = 0;
-
+	private static ArrayList<Carne> listaDeProdutos = new ArrayList<Carne>();
 	static ArrayList<Carne> listaCarneSelecionada = new ArrayList<>();
+
+	static {
+		// Declara a ArrayList "Lista de Produtos".
+
+		Carne picanha = new Carne();
+		picanha.nome = "Picanha";
+		picanha.preco = 66.79;
+
+		Carne costela = new Carne();
+		costela.nome = "Costela";
+		costela.preco = 27.34;
+
+		Carne asa = new Carne();
+		asa.nome = "Asa";
+		asa.preco = 16.78;
+
+		listaDeProdutos.add(picanha);
+		listaDeProdutos.add(costela);
+		listaDeProdutos.add(asa);
+
+	}
+	
+	public static void cadastrarCarne() {
+		
+		System.out.println("Informe o nome da carne");
+		
+		String nome = LeitorDeDado.sc.nextLine();
+
+		System.out.println("Informe o preco da carne");
+		
+		double preco = Double.parseDouble(LeitorDeDado.sc.nextLine());
+		Carne c = new Carne();
+		c.nome = nome;
+		c.preco = preco;
+		listaDeProdutos.add(c);
+	}
 
 	public static void chamarSelecao() {
 		System.out.println("\n/--------------------------------------------------\\");
@@ -17,25 +53,11 @@ public class SelecaoDeCarne {
 
 		System.out.println("As carnes disponíveis são: ");
 
-		// Declara a ArrayList "Lista de Produtos".
-		ArrayList<Carne> listaDeProdutos = new ArrayList<Carne>();
-		
-		Carne picanha = new Carne();
-		picanha.nome = "Picanha";
-		picanha.preco = 66.79;
-		
-		Carne costela = new Carne();
-		costela.nome = "Costela";
-		costela.preco = 27.34;
-
-		listaDeProdutos.add(picanha);
-		listaDeProdutos.add(costela);
-		
 		for (int j = 0; j < listaDeProdutos.size(); j++) {
-			
+
 			System.out.println(j + 1 + ". " + listaDeProdutos.get(j).nome + " " + listaDeProdutos.get(j).preco);
 		}
-		
+
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println("Escolha as carnes desejadas");
 		System.out.println("Para escolher as carnes desejadas digite:");
@@ -44,43 +66,36 @@ public class SelecaoDeCarne {
 		System.out.println("\\--------------------------------------------------/");
 
 		// Sequência de perguntas a respeito das carnes.
+
 		int resposta;
-		do {
-			System.out.println("Você gostaria de comprar Picanha?");
-			resposta = LeitorDeDado.sc.nextInt();
+		for (int i = 0; i < listaDeProdutos.size(); i++) {
+			System.out.println("Você gostaria de comprar " + listaDeProdutos.get(i).nome + " ?");
+			resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
 			if (resposta == SIM) {
-				listaCarneSelecionada.add(picanha);
-			} 
-		} while (resposta != SIM && resposta != NAO);
-		
-		do {
-			System.out.println("Você gostaria de comprar Costela?");
-			resposta = LeitorDeDado.sc.nextInt();
-			if (resposta == SIM) {
-				listaCarneSelecionada.add(costela);
-			} 
-		} while (resposta != SIM && resposta != NAO);
-
-
-		
-
-		System.out.println("\n/--------------------------------------------------\\");
-		System.out.println(" 	LISTA DE CARNES SELECIONADAS");
-		System.out.println("\\--------------------------------------------------/");
-		
-		for (int k = 0; k < listaCarneSelecionada.size(); k++) {
-			System.out.println(k + 1 + ". " + listaCarneSelecionada.get(k).nome);
+				listaCarneSelecionada.add(listaDeProdutos.get(i));
+			}
+			if (resposta != SIM && resposta != NAO) {
+				i--;
+			}
 		}
-		Bebida.selecao();
+
+//		System.out.println("\n/--------------------------------------------------\\");
+//		System.out.println(" 	LISTA DE CARNES SELECIONADAS");
+//		System.out.println("\\--------------------------------------------------/");
+//
+//		for (int k = 0; k < listaCarneSelecionada.size(); k++) {
+//			System.out.println(k + 1 + ". " + listaCarneSelecionada.get(k).nome);
+//		}
+//		Bebida.selecao();
 		Calculokg.kgGrama();
 	}
-	
+
 	public static int pegarQuantidadeCarnesSelecionadas() {
 		return listaCarneSelecionada.size();
 	}
-	
+
 	public static List<Carne> pegarListaCarnes() {
 		return listaCarneSelecionada;
 	}
-	
+
 }

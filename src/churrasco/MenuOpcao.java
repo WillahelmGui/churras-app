@@ -2,10 +2,11 @@ package churrasco;
 
 public class MenuOpcao {
 
+	private final static int OPCAO_SAIR_PROGRAMA = 0;
 	private final static int OPCAO_CADASTRAR_CONVIDADO = 1;
 	private final static int OPCAO_LISTAR_CONVIDADO = 2;
 	private final static int OPCAO_CADASTRAR_SELECAO_DE_CARNE = 3;
-	private final static int OPCAO_SAIR_PROGRAMA = 4;
+	private final static int OPCAO_CADASTRAR_CARNE = 4;
 	
 	public void iniciar() {
 		
@@ -15,7 +16,7 @@ public class MenuOpcao {
 			String texto = pegarTextoDaListaOpcao();
 			System.out.println(texto);
 			
-			opcaoEscolhida = LeitorDeDado.sc.nextByte();
+			opcaoEscolhida = Byte.parseByte(LeitorDeDado.sc.nextLine());
 
 			switch (opcaoEscolhida) {
 			case OPCAO_CADASTRAR_CONVIDADO:
@@ -23,6 +24,9 @@ public class MenuOpcao {
 				break;
 			case OPCAO_LISTAR_CONVIDADO: 
 				ServicoConvidado.listar();
+				break;
+			case OPCAO_CADASTRAR_CARNE:
+				SelecaoDeCarne.cadastrarCarne();
 				break;
 			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
 				SelecaoDeCarne.chamarSelecao();
@@ -42,12 +46,13 @@ public class MenuOpcao {
 	
 	public String pegarTextoDaListaOpcao() {
 		
-		return "\n--------------------------"
-				+ "\nEscolha uma das opções\n"
-				+ OPCAO_CADASTRAR_CONVIDADO + ". Cadastro de Convidado"
-				+ "\n2. Lista de Convidado"
-				+ "\n3. Seleção de Carnes e Cálculo"
-				+ "\n4. Sair"
-				+ "\n--------------------------";
+		return "\n--------------------------\n"
+				+ "Escolha uma das opções\n"
+				+ OPCAO_CADASTRAR_CONVIDADO + ". Cadastro de Convidado\n"
+				+ OPCAO_LISTAR_CONVIDADO + ". Lista de Convidado\n"
+				+ OPCAO_CADASTRAR_SELECAO_DE_CARNE + ". Seleção de Carnes e Cálculo\n"
+				+ OPCAO_CADASTRAR_CARNE + ". Cadastrar Carnes\n"
+				+ OPCAO_SAIR_PROGRAMA + ". Sair\n"
+				+ "--------------------------";
 	}
 }
