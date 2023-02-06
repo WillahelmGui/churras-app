@@ -52,7 +52,7 @@ public class SelecaoDeCarne {
 		System.out.println("\\--------------------------------------------------/");
 
 		System.out.println("As carnes disponíveis são: ");
-
+		//
 		for (int j = 0; j < listaDeProdutos.size(); j++) {
 
 			System.out.println(j + 1 + ". " + listaDeProdutos.get(j).nome + " " + listaDeProdutos.get(j).preco);

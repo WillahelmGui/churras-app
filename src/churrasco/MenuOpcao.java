@@ -7,6 +7,7 @@ public class MenuOpcao {
 	private final static int OPCAO_LISTAR_CONVIDADO = 2;
 	private final static int OPCAO_CADASTRAR_SELECAO_DE_CARNE = 3;
 	private final static int OPCAO_CADASTRAR_CARNE = 4;
+	private final static int OPCAO_CADASTRAR_BEBIDA = 5;
 	
 	public void iniciar() {
 		
@@ -31,7 +32,9 @@ public class MenuOpcao {
 			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
 				SelecaoDeCarne.chamarSelecao();
 				break;
-				
+			case OPCAO_CADASTRAR_BEBIDA:
+				ServicoBebida.cadastrarBebida();
+				break;				
 			case OPCAO_SAIR_PROGRAMA:
 				System.out.println("Aplicação encerrada.");
 				break;
@@ -52,6 +55,7 @@ public class MenuOpcao {
 				+ OPCAO_LISTAR_CONVIDADO + ". Lista de Convidado\n"
 				+ OPCAO_CADASTRAR_SELECAO_DE_CARNE + ". Seleção de Carnes e Cálculo\n"
 				+ OPCAO_CADASTRAR_CARNE + ". Cadastrar Carnes\n"
+				+ OPCAO_CADASTRAR_BEBIDA + ". Cadastrar Bebida\n"
 				+ OPCAO_SAIR_PROGRAMA + ". Sair\n"
 				+ "--------------------------";
 	}
