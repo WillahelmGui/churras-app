@@ -19,7 +19,7 @@ public class Calculokg {
 
 		System.out.println(" Considerando que cada pessoa bebe 1,4L \n e come aproximadamente 550G no churrasco \n");
 		carnePesoTotal = ServicoConvidado.pegarQuantidadeConvidados() * CARNE_PESSOA;
-		double qtdCarnePorPessoa =  carnePesoTotal / SelecaoDeCarne.pegarQuantidadeCarnesSelecionadas();
+		double qtdCarnePorPessoa =  carnePesoTotal / ServicoCarne.pegarQuantidadeCarnesSelecionadas();
 
 		if (carnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
@@ -30,20 +30,16 @@ public class Calculokg {
 			System.out.println("    CADA UM DOS " + ServicoConvidado.pegarQuantidadeConvidados() + " PARTICIPANTES DEVEM COMPRAR: ");
 			System.out.println("\\--------------------------------------------------/");
 
-			for (int j = 0; j < SelecaoDeCarne.pegarQuantidadeCarnesSelecionadas(); j++) {
-				String nomePrecoCarne = SelecaoDeCarne.pegarListaCarnes().get(j).nome + " " + SelecaoDeCarne.pegarListaCarnes().get(j).preco;
+			for (int j = 0; j < ServicoCarne.pegarQuantidadeCarnesSelecionadas(); j++) {
+				String nomePrecoCarne = ServicoCarne.pegarListaCarnes().get(j).nome + " " + ServicoCarne.pegarListaCarnes().get(j).preco;
 				System.out.println(". " + qtdCarnePorPessoa + "Kg de " + nomePrecoCarne);
-				precoTotalCarnes += SelecaoDeCarne.pegarListaCarnes().get(j).preco * qtdCarnePorPessoa;
+				precoTotalCarnes += ServicoCarne.pegarListaCarnes().get(j).preco * qtdCarnePorPessoa;
 			}
-			
 			System.out.println("Kg total de carnes: " + carnePesoTotal + "Kg.");
 			System.out.println("Preço total das carnes: " + precoTotalCarnes); // Não feito ainda
 		}
-
 		System.out.println(" ");
-
 		ServicoBebida.BebidasMLTotal = ServicoConvidado.pegarQuantidadeConvidados() * ServicoBebida.BebidaPessoa;
-
 		if (ServicoBebida.BebidasMLTotal != 0) {
 			if (ServicoBebida.listaBebidaSelecionada != null) {
 				for (int k = 0; k < ServicoBebida.listaBebidaSelecionada.size(); k++) {
@@ -56,7 +52,6 @@ public class Calculokg {
 				System.out.println("Preço total das bebidas: "); // Não feito ainda
 			}
 		}
-
 		if (ServicoBebida.BebidasMLTotal == 0) {
 			System.out.println(" ");
 		} else {

@@ -27,10 +27,10 @@ public class MenuOpcao {
 				ServicoConvidado.listar();
 				break;
 			case OPCAO_CADASTRAR_CARNE:
-				SelecaoDeCarne.cadastrarCarne();
+				ServicoCarne.cadastrarCarne();
 				break;
 			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
-				SelecaoDeCarne.chamarSelecao();
+				ServicoCarne.chamarSelecao();
 				break;
 			case OPCAO_CADASTRAR_BEBIDA:
 				ServicoBebida.cadastrarBebida();

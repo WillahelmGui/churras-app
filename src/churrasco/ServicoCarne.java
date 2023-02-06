@@ -3,7 +3,7 @@ package churrasco;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelecaoDeCarne {
+public class ServicoCarne {
 
 	static final int SIM = 1;
 	static final int NAO = 0;

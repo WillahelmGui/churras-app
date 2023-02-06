@@ -71,6 +71,23 @@ public class ServicoBebida {
 
 			System.out.println(j + 1 + ". " + listaDeBebida.get(j).nome + " " + listaDeBebida.get(j).preco);
 		}
+		System.out.println("\n/--------------------------------------------------\\");
+		System.out.println("Escolha as bebidas desejadas");
+		System.out.println("Para escolher as bebidas desejadas digite:");
+		System.out.println("1. SIM  0. NÃO");
+		System.out.println("\\--------------------------------------------------/");
+
+		int resposta;
+		for (int i = 0; i < listaDeBebida.size(); i++) {
+			System.out.println("Você gostaria de comprar " + listaDeBebida.get(i).nome + " ?");
+			resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
+			if (resposta == SIM) {
+				listaBebidaSelecionada.add(listaDeBebida.get(i));
+			}
+			if (resposta != SIM && resposta != NAO) {
+				i--;
+			}
+		}
 	}
 
 }
