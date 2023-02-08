@@ -1,6 +1,7 @@
 package churrasco;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ServicoBebida {
 
@@ -46,15 +47,13 @@ public class ServicoBebida {
 	}
 
 	public static void chamarSelecaoBebidas() {
-
 		int kp;
-
 		do {
 			System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar bebidas?");
 			System.out.println("1. Sim 0. Não");
 			System.out.println("\\-------------------------------------/");
-			switch (kp = LeitorDeDado.sc.nextByte()) {
+			switch (kp = LeitorDeDado.sc.nextInt()) {
 			// Código quando o usuário aceitar.
 			case 1:
 				ServicoBebida.mostrarBebidas();
@@ -69,7 +68,7 @@ public class ServicoBebida {
 	public static void mostrarBebidas() {
 		for (int j = 0; j < listaDeBebida.size(); j++) {
 
-			System.out.println(j + 1 + ". " + listaDeBebida.get(j).nome + " " + listaDeBebida.get(j).preco);
+			System.out.println(j + 1 + ". " + listaDeBebida.get(j).nome + " R$" + listaDeBebida.get(j).preco + "/500ml");
 		}
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println("Escolha as bebidas desejadas");
@@ -80,7 +79,7 @@ public class ServicoBebida {
 		int resposta;
 		for (int i = 0; i < listaDeBebida.size(); i++) {
 			System.out.println("Você gostaria de comprar " + listaDeBebida.get(i).nome + " ?");
-			resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
+			resposta = LeitorDeDado.sc.nextByte();
 			if (resposta == SIM) {
 				listaBebidaSelecionada.add(listaDeBebida.get(i));
 			}
@@ -88,6 +87,13 @@ public class ServicoBebida {
 				i--;
 			}
 		}
+	}
+	public static int pegarQuantidadeBebidaSelecionadas() {
+		return listaBebidaSelecionada.size();
+	}
+
+	public static List<Bebida> pegarListaBebida() {
+		return listaDeBebida;
 	}
 
 }
