@@ -15,15 +15,15 @@ public class ServicoBebida {
 	static {
 		Bebida agua = new Bebida();
 		agua.nome = "Água";
-		agua.preco = 2.45;
+		agua.preco = 3.00;
 
 		Bebida aguaComGas = new Bebida();
 		aguaComGas.nome = "Água com gás";
-		aguaComGas.preco = 3.00;
+		aguaComGas.preco = 5.00;
 
 		Bebida suco = new Bebida();
 		suco.nome = "Suco natural";
-		suco.preco = 11.90;
+		suco.preco = 10.00;
 
 		listaDeBebida.add(agua);
 		listaDeBebida.add(aguaComGas);

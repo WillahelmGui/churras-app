@@ -22,13 +22,13 @@ public class Calculokg {
 		bebidaLitroTotal = ServicoConvidado.pegarQuantidadeConvidados() * BEBIDA_PESSOA;
 
 		double qtdCarnePorPessoa = carnePesoTotal / ServicoCarne.pegarQuantidadeCarnesSelecionadas();
-		
-		int bebidaSelec = ServicoBebida.pegarQuantidadeBebidaSelecionadas();
 		double quantidadeBebidaPessoa = 0;
+		/*int bebidaSelec = ServicoBebida.pegarQuantidadeBebidaSelecionadas();
+		
 		if(bebidaSelec != 0) {
 			quantidadeBebidaPessoa = bebidaLitroTotal / bebidaSelec;
 		}
-		
+		 */
 		if (ServicoConvidado.pegarQuantidadeConvidados() == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
@@ -51,16 +51,17 @@ public class Calculokg {
 		}
 		// A partir desse ponto se inicia a lógica para as bebidas
 		ServicoBebida.chamarSelecaoBebidas();
+		quantidadeBebidaPessoa = bebidaLitroTotal / ServicoBebida.pegarQuantidadeBebidaSelecionadas();
 		if (ServicoBebida.listaBebidaSelecionada != null) {
 			for (int k = 0; k < ServicoBebida.listaBebidaSelecionada.size(); k++) {
 				String nomePrecoBebida = ServicoBebida.pegarListaBebida().get(k).nome + " R$"
-						+ ServicoBebida.pegarListaBebida().get(k).preco + "/500Ml";
+						+ ServicoBebida.pegarListaBebida().get(k).preco + "/1L";
 				System.out.println(df.format(quantidadeBebidaPessoa) + "L de " + nomePrecoBebida);
 				precoTotalBebidas += ServicoBebida.pegarListaBebida().get(k).preco * quantidadeBebidaPessoa;
 			}
 			System.out.println("Litros total de Bebidas: " + df.format(bebidaLitroTotal) + "L");
 
-			System.out.println("Preço total das bebidas: " + precoTotalBebidas);
+			System.out.println("Preço total das bebidas: " + df.format(precoTotalBebidas));
 		}
 
 	}
