@@ -53,7 +53,7 @@ public class ServicoBebida {
 			System.out.println("Você gostaria de comprar bebidas?");
 			System.out.println("1. Sim 0. Não");
 			System.out.println("\\-------------------------------------/");
-			switch (kp = LeitorDeDado.sc.nextInt()) {
+			switch (kp = Integer.parseInt(LeitorDeDado.sc.nextLine())) {
 			// Código quando o usuário aceitar.
 			case 1:
 				ServicoBebida.mostrarBebidas();
@@ -79,7 +79,7 @@ public class ServicoBebida {
 		int resposta;
 		for (int i = 0; i < listaDeBebida.size(); i++) {
 			System.out.println("Você gostaria de comprar " + listaDeBebida.get(i).nome + " ?");
-			resposta = LeitorDeDado.sc.nextByte();
+			resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
 			if (resposta == SIM) {
 				listaBebidaSelecionada.add(listaDeBebida.get(i));
 			}

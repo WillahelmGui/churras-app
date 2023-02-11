@@ -22,8 +22,13 @@ public class Calculokg {
 		bebidaLitroTotal = ServicoConvidado.pegarQuantidadeConvidados() * BEBIDA_PESSOA;
 
 		double qtdCarnePorPessoa = carnePesoTotal / ServicoCarne.pegarQuantidadeCarnesSelecionadas();
-		double quantidadeBebidaPessoa = bebidaLitroTotal / ServicoBebida.pegarQuantidadeBebidaSelecionadas();
-
+		
+		int bebidaSelec = ServicoBebida.pegarQuantidadeBebidaSelecionadas();
+		double quantidadeBebidaPessoa = 0;
+		if(bebidaSelec != 0) {
+			quantidadeBebidaPessoa = bebidaLitroTotal / bebidaSelec;
+		}
+		
 		if (ServicoConvidado.pegarQuantidadeConvidados() == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
@@ -41,20 +46,22 @@ public class Calculokg {
 				precoTotalCarnes += ServicoCarne.pegarListaCarnes().get(j).preco * qtdCarnePorPessoa;
 			}
 
-			System.out.println("Kg total de carnes: " + carnePesoTotal + "Kg.");
+			System.out.println("Kg total de carnes: " + df.format(precoTotalCarnes) + "Kg.");
 			System.out.println("Preço total das carnes: " + precoTotalCarnes);
 		}
 		// A partir desse ponto se inicia a lógica para as bebidas
 		ServicoBebida.chamarSelecaoBebidas();
 		if (ServicoBebida.listaBebidaSelecionada != null) {
 			for (int k = 0; k < ServicoBebida.listaBebidaSelecionada.size(); k++) {
-				System.out.println(k++ + ". " + bebidaLitroTotal / ServicoBebida.listaBebidaSelecionada.size() + "L de "
-						+ ServicoBebida.listaBebidaSelecionada.get(k));
+				String nomePrecoBebida = ServicoBebida.pegarListaBebida().get(k).nome + " R$"
+						+ ServicoBebida.pegarListaBebida().get(k).preco + "/500Ml";
+				System.out.println(df.format(quantidadeBebidaPessoa) + "L de " + nomePrecoBebida);
+				precoTotalBebidas += ServicoBebida.pegarListaBebida().get(k).preco * quantidadeBebidaPessoa;
 			}
-			System.out.println("Litros total de Bebidas: " + bebidaLitroTotal + "L");
+			System.out.println("Litros total de Bebidas: " + df.format(bebidaLitroTotal) + "L");
 
-			System.out.println("Preço total das bebidas: ");
+			System.out.println("Preço total das bebidas: " + precoTotalBebidas);
 		}
-	}
 
+	}
 }
