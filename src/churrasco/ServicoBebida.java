@@ -15,15 +15,15 @@ public class ServicoBebida {
 	static {
 		Bebida agua = new Bebida();
 		agua.nome = "Água";
-		agua.preco = 2.45;
+		agua.preco = 3.00;
 
 		Bebida aguaComGas = new Bebida();
 		aguaComGas.nome = "Água com gás";
-		aguaComGas.preco = 3.00;
+		aguaComGas.preco = 5.00;
 
 		Bebida suco = new Bebida();
 		suco.nome = "Suco natural";
-		suco.preco = 11.90;
+		suco.preco = 10.00;
 
 		listaDeBebida.add(agua);
 		listaDeBebida.add(aguaComGas);
@@ -47,15 +47,13 @@ public class ServicoBebida {
 	}
 
 	public static void chamarSelecaoBebidas() {
-
 		int kp;
-
 		do {
 			System.out.println("\n/-------------------------------------\\");
 			System.out.println("Você gostaria de comprar bebidas?");
 			System.out.println("1. Sim 0. Não");
 			System.out.println("\\-------------------------------------/");
-			switch (kp = LeitorDeDado.sc.nextByte()) {
+			switch (kp = Integer.parseInt(LeitorDeDado.sc.nextLine())) {
 			// Código quando o usuário aceitar.
 			case 1:
 				ServicoBebida.mostrarBebidas();
@@ -70,7 +68,7 @@ public class ServicoBebida {
 	public static void mostrarBebidas() {
 		for (int j = 0; j < listaDeBebida.size(); j++) {
 
-			System.out.println(j + 1 + ". " + listaDeBebida.get(j).nome + " " + listaDeBebida.get(j).preco);
+			System.out.println(j + 1 + ". " + listaDeBebida.get(j).nome + " R$" + listaDeBebida.get(j).preco + "/500ml");
 		}
 		System.out.println("\n/--------------------------------------------------\\");
 		System.out.println("Escolha as bebidas desejadas");
@@ -90,12 +88,21 @@ public class ServicoBebida {
 			}
 		}
 	}
+<<<<<<< HEAD
 	public static int pegarQuantidadeCarnesSelecionadas() {
 		return listaBebidaSelecionada.size();
 	}
 
 	public static List<Bebida> pegarListaCarnes() {
 		return listaBebidaSelecionada;
+=======
+	public static int pegarQuantidadeBebidaSelecionadas() {
+		return listaBebidaSelecionada.size();
+	}
+
+	public static List<Bebida> pegarListaBebida() {
+		return listaDeBebida;
+>>>>>>> 6e5e91dce2b9a0d8c4f108f94788a8880483c50d
 	}
 
 }
