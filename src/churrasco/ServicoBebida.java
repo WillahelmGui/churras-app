@@ -1,6 +1,7 @@
 package churrasco;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ServicoBebida {
 
@@ -88,6 +89,13 @@ public class ServicoBebida {
 				i--;
 			}
 		}
+	}
+	public static int pegarQuantidadeCarnesSelecionadas() {
+		return listaBebidaSelecionada.size();
+	}
+
+	public static List<Bebida> pegarListaCarnes() {
+		return listaBebidaSelecionada;
 	}
 
 }

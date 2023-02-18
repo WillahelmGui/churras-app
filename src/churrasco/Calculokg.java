@@ -20,7 +20,6 @@ public class Calculokg {
 		System.out.println(" Considerando que cada pessoa bebe 1,4L \n e come aproximadamente 550G no churrasco \n");
 		carnePesoTotal = ServicoConvidado.pegarQuantidadeConvidados() * CARNE_PESSOA;
 		double qtdCarnePorPessoa =  carnePesoTotal / ServicoCarne.pegarQuantidadeCarnesSelecionadas();
-
 		if (carnePesoTotal == 0) {
 			System.out.println("Epa! Você não cadastrou ninguém no seu churrasco! \n"
 					+ "Volte para o menu e cadastre os participantes. ");
