@@ -30,15 +30,15 @@ public class ServicoCarne {
 		listaDeProdutos.add(asa);
 
 	}
-	
+
 	public static void cadastrarCarne() {
-		
+
 		System.out.println("Informe o nome da carne");
-		
+
 		String nome = LeitorDeDado.sc.nextLine();
 
 		System.out.println("Informe o preco da carne");
-		
+
 		double preco = Double.parseDouble(LeitorDeDado.sc.nextLine());
 		Carne c = new Carne();
 		c.nome = nome;
@@ -68,15 +68,19 @@ public class ServicoCarne {
 		// Sequência de perguntas a respeito das carnes.
 
 		int resposta;
-		for (int i = 0; i < listaDeProdutos.size(); i++) {
-			System.out.println("Você gostaria de comprar " + listaDeProdutos.get(i).nome + " ?");
-			resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
-			if (resposta == SIM) {
-				listaCarneSelecionada.add(listaDeProdutos.get(i));
+		try {
+			for (int i = 0; i < listaDeProdutos.size(); i++) {
+				System.out.println("Você gostaria de comprar " + listaDeProdutos.get(i).nome + " ?");
+				resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
+				if (resposta == SIM) {
+					listaCarneSelecionada.add(listaDeProdutos.get(i));
+				}
+				if (resposta != SIM && resposta != NAO) {
+					i--;
+				}
 			}
-			if (resposta != SIM && resposta != NAO) {
-				i--;
-			}
+		} catch (NumberFormatException e) {
+			System.out.println("Número inválido.");
 		}
 
 //		System.out.println("\n/--------------------------------------------------\\");

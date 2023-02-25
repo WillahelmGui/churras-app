@@ -13,42 +13,40 @@ public class MenuOpcao {
 	public void iniciar() {
 
 		do {
+			String texto = pegarTextoDaListaOpcao();
+			System.out.println(texto);
 			try {
-
-				String texto = pegarTextoDaListaOpcao();
-				System.out.println(texto);
 				opcaoEscolhida = Byte.parseByte(LeitorDeDado.sc.nextLine());
-
-				switch (opcaoEscolhida) {
-				case OPCAO_CADASTRAR_CONVIDADO:
-					ServicoConvidado.cadastrar();
-					break;
-				case OPCAO_LISTAR_CONVIDADO:
-					ServicoConvidado.listar();
-					break;
-				case OPCAO_CADASTRAR_CARNE:
-					ServicoCarne.cadastrarCarne();
-					break;
-				case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
-					ServicoCarne.chamarSelecao();
-					break;
-				case OPCAO_CADASTRAR_BEBIDA:
-					ServicoBebida.cadastrarBebida();
-					break;
-				case OPCAO_SAIR_PROGRAMA:
-					System.out.println("Aplicação encerrada.");
-					break;
-				default:
-					System.out.println("digite um numero valido");
-					break;
-				}
-
 			} catch (
 
 			Exception e) {
-				System.out.println("Insira uma opção válida");
+				
 				opcaoEscolhida = -1;
 			}
+			switch (opcaoEscolhida) {
+			case OPCAO_CADASTRAR_CONVIDADO:
+				ServicoConvidado.cadastrar();
+				break;
+			case OPCAO_LISTAR_CONVIDADO:
+				ServicoConvidado.listar();
+				break;
+			case OPCAO_CADASTRAR_CARNE:
+				ServicoCarne.cadastrarCarne();
+				break;
+			case OPCAO_CADASTRAR_SELECAO_DE_CARNE:
+				ServicoCarne.chamarSelecao();
+				break;
+			case OPCAO_CADASTRAR_BEBIDA:
+				ServicoBebida.cadastrarBebida();
+				break;
+			case OPCAO_SAIR_PROGRAMA:
+				System.out.println("Aplicação encerrada.");
+				break;
+			default:
+				System.out.println("Insira uma opção válida");
+				break;
+			}
+
 		} while (opcaoEscolhida != OPCAO_SAIR_PROGRAMA);
 		LeitorDeDado.sc.close();
 
