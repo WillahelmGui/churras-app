@@ -78,11 +78,10 @@ public class ServicoCarne {
 				} else if(resposta == NAO) {
 					System.out.println("Carne nao adicionada");
 				} else {
-					i--;
-					System.out.println("Número inválido.");
+					throw new OpcaoInvalidaException();
 				}
 				
-			} catch (NumberFormatException e) {
+			} catch (NumberFormatException | OpcaoInvalidaException e) {
 				i--;
 				e.printStackTrace();
 				System.out.println("Número inválido.");
