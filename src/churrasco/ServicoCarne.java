@@ -81,7 +81,7 @@ public class ServicoCarne {
 					throw new OpcaoInvalidaException();
 				}
 				
-			} catch (NumberFormatException | OpcaoInvalidaException e) {
+			} catch (NumberFormatException e) {
 				i--;
 				e.printStackTrace();
 				System.out.println("Número inválido.");

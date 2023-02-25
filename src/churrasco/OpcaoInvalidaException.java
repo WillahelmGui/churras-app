@@ -1,5 +1,5 @@
 package churrasco;
 
-public class OpcaoInvalidaException extends Exception {
+public class OpcaoInvalidaException extends IllegalArgumentException {
 
 }
