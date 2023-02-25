@@ -67,20 +67,26 @@ public class ServicoCarne {
 
 		// Sequência de perguntas a respeito das carnes.
 
-		int resposta;
-		try {
-			for (int i = 0; i < listaDeProdutos.size(); i++) {
-				System.out.println("Você gostaria de comprar " + listaDeProdutos.get(i).nome + " ?");
+		int resposta = 0;
+		for (int i = 0; i < listaDeProdutos.size(); i++) {
+			System.out.println("Você gostaria de comprar " + listaDeProdutos.get(i).nome + " ?");
+
+			try {
 				resposta = Integer.parseInt(LeitorDeDado.sc.nextLine());
-				if (resposta == SIM) {
+				if(resposta == SIM) {
 					listaCarneSelecionada.add(listaDeProdutos.get(i));
-				}
-				if (resposta != SIM && resposta != NAO) {
+				} else if(resposta == NAO) {
+					System.out.println("Carne nao adicionada");
+				} else {
 					i--;
+					System.out.println("Número inválido.");
 				}
+				
+			} catch (NumberFormatException e) {
+				i--;
+				e.printStackTrace();
+				System.out.println("Número inválido.");
 			}
-		} catch (NumberFormatException e) {
-			System.out.println("Número inválido.");
 		}
 
 //		System.out.println("\n/--------------------------------------------------\\");
