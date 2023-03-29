@@ -1,14 +1,17 @@
-package churrasco;
+package service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import churrasco.LeitorDeDado;
+import model.Bebida;
 
 public class ServicoBebida {
 
 	static final int SIM = 1;
 	static final int NAO = 0;
 	private static ArrayList<Bebida> listaDeBebida = new ArrayList<Bebida>();
-	static ArrayList<Bebida> listaBebidaSelecionada = new ArrayList<>();
+	public static ArrayList<Bebida> listaBebidaSelecionada = new ArrayList<>();
 
 	static double BebidasMLTotal;
 	static double BebidaPessoa = 1400;

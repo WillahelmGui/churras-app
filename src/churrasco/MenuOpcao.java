@@ -1,5 +1,9 @@
 package churrasco;
 
+import service.ServicoBebida;
+import service.ServicoCarne;
+import service.ServicoConvidado;
+
 public class MenuOpcao {
 
 	byte opcaoEscolhida;

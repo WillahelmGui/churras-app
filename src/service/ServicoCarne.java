@@ -1,7 +1,12 @@
-package churrasco;
+package service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import churrasco.Calculokg;
+import churrasco.LeitorDeDado;
+import churrasco.OpcaoInvalidaException;
+import model.Carne;
 
 public class ServicoCarne {
 

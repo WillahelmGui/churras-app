@@ -1,6 +1,9 @@
-package churrasco;
+package service;
 
 import java.util.ArrayList;
+
+import churrasco.LeitorDeDado;
+import model.Convidado;
 
 public class ServicoConvidado {
 	

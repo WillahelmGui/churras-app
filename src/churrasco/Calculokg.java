@@ -2,6 +2,10 @@ package churrasco;
 
 import java.text.DecimalFormat;
 
+import service.ServicoBebida;
+import service.ServicoCarne;
+import service.ServicoConvidado;
+
 public class Calculokg {
 	static DecimalFormat df = new DecimalFormat("#.###");
 	static final double CARNE_PESSOA = 0.55;
