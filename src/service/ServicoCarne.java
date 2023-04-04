@@ -108,8 +108,11 @@ public class ServicoCarne {
 		return listaCarneSelecionada.size();
 	}
 
-	public static List<Carne> pegarListaCarnes() {
+	public static List<Carne> pegarListaCarnesSelecionadas() {
 		return listaCarneSelecionada;
+	}
+	public static List<Carne> pegarListaCarnes() {
+		return listaDeProdutos;
 	}
 
 }
