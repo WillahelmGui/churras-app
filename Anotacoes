@@ -1,0 +1,13 @@
+
+Fluxo esperado do programa.
+-> Iniciar
+-> Abre menu
+-> Cadastrar um ou mais convidados para o churrasco
+-> Consulta lista de convidados
+-> Selecionar carnes e bebidas 
+-> Calcular quanto cada um deve pagar 
+baseado na quantidade de convidados e 
+suas características.
+-> Finalizar
+
+

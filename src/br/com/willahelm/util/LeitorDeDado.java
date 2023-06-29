@@ -1,4 +1,4 @@
-package churrasco;
+package br.com.willahelm.util;
 
 import java.util.Scanner;
 

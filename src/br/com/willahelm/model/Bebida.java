@@ -1,4 +1,4 @@
-package model;
+package br.com.willahelm.model;
 
 public class Bebida {
 	
